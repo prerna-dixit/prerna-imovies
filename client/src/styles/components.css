@@ -1,0 +1,599 @@
+/* ==========================================================================
+   IMovies — Pastel Bubblegum Dream Component Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Buttons (Pastel Pill & Rounded Buttons with Glossy / Lift Effects)
+   -------------------------------------------------------------------------- */
+
+.btn-pastel,
+.btn-brutal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--pink-cotton);
+  color: var(--berry-deep);
+  border: var(--border-medium);
+  border-radius: var(--radius-pill);
+  padding: 10px 22px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pastel:hover,
+.btn-brutal:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: var(--shadow-md);
+  filter: brightness(1.03);
+}
+
+.btn-pastel:active,
+.btn-brutal:active {
+  transform: translateY(1px) scale(0.99);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-pastel:disabled,
+.btn-brutal:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Button Variants */
+.btn-bubblegum,
+.btn-brutal-magenta {
+  background: linear-gradient(135deg, var(--pink-bubblegum), #FF7AB9);
+  color: #FFFFFF;
+  border-color: #F0A8CB;
+  box-shadow: var(--shadow-bubblegum);
+  text-shadow: 0 1px 2px rgba(84, 39, 67, 0.2);
+}
+
+.btn-bubblegum:hover,
+.btn-brutal-magenta:hover {
+  background: linear-gradient(135deg, #FFA0D2, #FF8FC7);
+  box-shadow: 0 10px 26px rgba(255, 143, 199, 0.45);
+}
+
+.btn-lavender {
+  background: linear-gradient(135deg, var(--lavender), #D0BCFA);
+  color: var(--berry-deep);
+  border-color: #CBB4F5;
+  box-shadow: var(--shadow-lavender);
+}
+
+.btn-baby-blue,
+.btn-brutal-cyan {
+  background: linear-gradient(135deg, var(--baby-blue), #B8DDF8);
+  color: var(--berry-deep);
+  border-color: #B5D7F2;
+  box-shadow: 0 4px 14px rgba(200, 231, 255, 0.5);
+}
+
+.btn-baby-blue:hover,
+.btn-brutal-cyan:hover {
+  background: linear-gradient(135deg, #D4EDFF, var(--baby-blue));
+}
+
+.btn-mint,
+.btn-brutal-green {
+  background: linear-gradient(135deg, var(--mint-pastel), #C3ECCE);
+  color: var(--mint-deep);
+  border-color: #B6E3C3;
+  box-shadow: 0 4px 14px rgba(216, 243, 220, 0.5);
+}
+
+.btn-strawberry,
+.btn-brutal-red {
+  background: linear-gradient(135deg, var(--strawberry), #F4426F);
+  color: #FFFFFF;
+  border-color: #FF85A5;
+  box-shadow: 0 6px 18px rgba(255, 92, 133, 0.35);
+}
+
+.btn-yellow {
+  background: linear-gradient(135deg, var(--butter-yellow), #FFE885);
+  color: var(--berry-deep);
+  border-color: #F5DE88;
+}
+
+.btn-dark,
+.btn-brutal-dark {
+  background: var(--berry-deep);
+  color: #FFFFFF;
+  border-color: var(--berry-deep);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-dark:hover,
+.btn-brutal-dark:hover {
+  background: #683053;
+}
+
+.btn-outline {
+  background: #FFFFFF;
+  color: var(--berry-deep);
+  border: var(--border-medium);
+}
+
+.btn-outline:hover {
+  background: var(--pink-blush);
+}
+
+/* Button Sizes */
+.btn-sm,
+.btn-brutal-sm {
+  padding: 6px 15px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-pill);
+  gap: 6px;
+}
+
+.btn-lg {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: var(--radius-pill);
+}
+
+/* --------------------------------------------------------------------------
+   Cards (Soft Rounded with Pastel Pink Borders & Subtle Glows)
+   -------------------------------------------------------------------------- */
+
+.card-pastel,
+.card-brutal {
+  background: var(--bg-card);
+  border: var(--border-thin);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+  position: relative;
+}
+
+.card-pastel:hover,
+.card-brutal:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--pink-bubblegum);
+}
+
+/* Ticket Card Styling (Authentic Cinema Stub Look) */
+.card-ticket {
+  background: #FFFFFF;
+  border: var(--border-medium);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.25s ease;
+}
+
+.card-ticket:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Perforated divider line */
+.ticket-divider {
+  border: none;
+  border-top: 2px dashed var(--border-rose);
+  margin: 18px 0;
+  position: relative;
+}
+
+/* Decorative Ticket Notches */
+.ticket-notch-left,
+.ticket-notch-right {
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  background-color: var(--bg-milky);
+  border-radius: 50%;
+  border: 2px solid var(--border-rose);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.ticket-notch-left {
+  left: -12px;
+}
+
+.ticket-notch-right {
+  right: -12px;
+}
+
+/* --------------------------------------------------------------------------
+   Badges & Tags (Y2K Pastel Candies)
+   -------------------------------------------------------------------------- */
+
+.badge-pastel,
+.badge-brutal {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--pink-blush);
+  color: var(--berry-deep);
+  border: var(--border-thin);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  box-shadow: 0 1px 4px rgba(84, 39, 67, 0.04);
+}
+
+.badge-magenta {
+  background: linear-gradient(135deg, #FFE6F3, var(--pink-cotton));
+  color: var(--berry-deep);
+  border-color: var(--border-rose);
+}
+
+.badge-cyan {
+  background: linear-gradient(135deg, #E6F4FF, var(--baby-blue));
+  color: var(--berry-deep);
+  border-color: #B5D7F2;
+}
+
+.badge-lavender {
+  background: linear-gradient(135deg, #F3EEFF, var(--lavender));
+  color: var(--berry-deep);
+  border-color: #CBB4F5;
+}
+
+.badge-green {
+  background: linear-gradient(135deg, #EAF7EE, var(--mint-pastel));
+  color: var(--mint-deep);
+  border-color: #B6E3C3;
+}
+
+.badge-red {
+  background: linear-gradient(135deg, #FFF0F3, #FFD1DC);
+  color: #B81D45;
+  border-color: #FFA5BA;
+}
+
+.badge-yellow {
+  background: linear-gradient(135deg, #FFFBE6, var(--butter-yellow));
+  color: #6B5200;
+  border-color: #F5DE88;
+}
+
+/* --------------------------------------------------------------------------
+   Form Inputs & Controls
+   -------------------------------------------------------------------------- */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--berry-deep);
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+.input-pastel,
+.input-brutal,
+.select-pastel,
+.select-brutal {
+  width: 100%;
+  background: #FFFFFF;
+  color: var(--berry-deep);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 3px rgba(84, 39, 67, 0.04);
+}
+
+.input-pastel::placeholder,
+.input-brutal::placeholder {
+  color: #B895A9;
+  font-weight: 400;
+}
+
+.input-pastel:focus,
+.input-brutal:focus,
+.select-pastel:focus,
+.select-brutal:focus {
+  border-color: var(--pink-bubblegum);
+  box-shadow: 0 0 0 4px rgba(255, 143, 199, 0.25), inset 0 1px 2px rgba(84, 39, 67, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   Alerts & Notifications
+   -------------------------------------------------------------------------- */
+
+.alert-pastel,
+.alert-brutal {
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: var(--border-thin);
+  margin-bottom: 22px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.alert-error {
+  background: #FFF0F4;
+  border-color: #FFB3C6;
+  color: #9C1438;
+}
+
+.alert-success {
+  background: #EFFBF3;
+  border-color: #B6E3C3;
+  color: var(--mint-deep);
+}
+
+.alert-info {
+  background: #F0F7FF;
+  border-color: #B5D7F2;
+  color: #1A5480;
+}
+
+/* --------------------------------------------------------------------------
+   Navbar
+   -------------------------------------------------------------------------- */
+
+.navbar-pastel,
+.navbar-brutal {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 249, 252, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: var(--border-thin);
+  box-shadow: 0 4px 16px rgba(84, 39, 67, 0.04);
+  padding: 12px 24px;
+}
+
+.navbar-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--pink-cotton), var(--pink-blush));
+  color: var(--berry-deep);
+  border: var(--border-thin);
+  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.22s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.03) rotate(-1deg);
+  background: linear-gradient(135deg, var(--pink-bubblegum), var(--pink-cotton));
+  border-color: var(--pink-bubblegum);
+  box-shadow: var(--shadow-bubblegum);
+}
+
+.nav-logo-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  color: var(--pink-bubblegum);
+  box-shadow: 0 2px 6px rgba(84, 39, 67, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-profile-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  color: var(--berry-deep);
+  border: var(--border-thin);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.user-avatar-dot {
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, var(--pink-cotton), var(--lavender));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--berry-deep);
+  font-size: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Marquee Ticker (Subtle Y2K Cinema Ribbon)
+   -------------------------------------------------------------------------- */
+
+.marquee-container {
+  background: linear-gradient(90deg, #FFE3EF 0%, #FFF5FA 50%, #FFE3EF 100%);
+  color: var(--berry-deep);
+  border-top: var(--border-thin);
+  border-bottom: var(--border-thin);
+  padding: 8px 0;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(84, 39, 67, 0.03);
+}
+
+.marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-scroll 35s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.marquee-separator {
+  color: var(--pink-bubblegum);
+  margin: 0 4px;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.footer-pastel,
+.footer-brutal {
+  background: linear-gradient(180deg, #FFF9FC 0%, #FFEBF4 100%);
+  color: var(--berry-deep);
+  border-top: var(--border-thin);
+  padding: 56px 20px 32px;
+  margin-top: auto;
+  position: relative;
+}
+
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.footer-card {
+  background: #FFFFFF;
+  border: var(--border-thin);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Animations & Keyframes
+   -------------------------------------------------------------------------- */
+
+.spin-icon {
+  animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pulse-bubble {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Layout Adjustments
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .navbar-pastel,
+  .navbar-brutal {
+    padding: 10px 16px;
+  }
+
+  .nav-logo {
+    font-size: 1.15rem;
+    padding: 6px 14px;
+  }
+
+  .nav-links {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    padding: 8px 18px;
+  }
+
+  .main-content {
+    padding: 20px 16px 48px;
+  }
+}

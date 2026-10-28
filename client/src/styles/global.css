@@ -1,0 +1,208 @@
+/* ==========================================================================
+   IMovies — Pastel Bubblegum Dream Y2K Cinema Design System
+   ========================================================================== */
+
+:root {
+  /* Core Pastel Bubblegum Palette */
+  --pink-bubblegum: #FF8FC7;
+  --pink-cotton: #FFC2E2;
+  --pink-blush: #FFE3EF;
+  --bg-milky: #FFF9FC;
+  --lavender: #DCCBFF;
+  --baby-blue: #C8E7FF;
+  --strawberry: #FF5C85;
+  --berry-deep: #542743;
+  --berry-muted: #845371;
+  --border-rose: #F0A8CB;
+  --butter-yellow: #FFF0A8;
+  --mint-pastel: #D8F3DC;
+  --mint-deep: #256041;
+
+  /* Semantic Theme Mappings */
+  --bg-primary: var(--bg-milky);
+  --bg-secondary: var(--pink-blush);
+  --bg-card: #FFFFFF;
+  --text-primary: var(--berry-deep);
+  --text-muted: var(--berry-muted);
+  --text-inverted: #FFFFFF;
+
+  /* Backward Compatibility Accents */
+  --accent-yellow: var(--butter-yellow);
+  --accent-magenta: var(--pink-bubblegum);
+  --accent-cyan: var(--baby-blue);
+  --accent-green: var(--mint-pastel);
+  --accent-red: var(--strawberry);
+
+  /* Border Styles */
+  --border-thin: 1.5px solid var(--border-rose);
+  --border-medium: 2px solid var(--border-rose);
+  --border-thick: 2.5px solid var(--border-rose);
+  --border-berry: 2px solid var(--berry-deep);
+
+  /* Rounded Radii */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(84, 39, 67, 0.06);
+  --shadow-md: 0 6px 18px rgba(84, 39, 67, 0.08);
+  --shadow-lg: 0 12px 32px rgba(84, 39, 67, 0.12);
+  --shadow-bubblegum: 0 8px 24px rgba(255, 143, 199, 0.35);
+  --shadow-lavender: 0 8px 24px rgba(220, 203, 255, 0.4);
+  --shadow-pill: 0 4px 14px rgba(84, 39, 67, 0.08);
+  --shadow-glow: 0 0 20px rgba(255, 194, 226, 0.6);
+
+  /* Typography */
+  --font-heading: 'Fredoka', cursive, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Mono', SFMono-Regular, Consolas, monospace;
+}
+
+/* ==========================================================================
+   CSS Reset & Base Rules
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  min-height: 100vh;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background decorative sparkle overlay */
+body {
+  background-image: 
+    radial-gradient(var(--pink-cotton) 0.75px, transparent 0.75px),
+    radial-gradient(var(--lavender) 0.75px, var(--bg-milky) 0.75px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Shared Layout Containers
+   ========================================================================== */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.section-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, var(--pink-blush), #FFFFFF);
+  color: var(--berry-deep);
+  padding: 10px 22px;
+  border: var(--border-thin);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Cute Custom Scrollbars
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-milky);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink-cotton);
+  border-radius: 10px;
+  border: 2px solid var(--bg-milky);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pink-bubblegum);
+}
+
+/* Selection highlight */
+::selection {
+  background: var(--pink-cotton);
+  color: var(--berry-deep);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
